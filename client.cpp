@@ -25,7 +25,7 @@ int main ()
         //  Get the reply.
         zmq::message_t reply;
         socket.recv (&reply);
-        std::cout << "Received " << std::string((char*)reply.data(), reply.size()); << request_nbr << std::endl;
+        std::cout << "Received " << std::string((char*)reply.data(), reply.size()) << request_nbr << std::endl;
     }
     return 0;
 }
