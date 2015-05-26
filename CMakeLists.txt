@@ -22,8 +22,20 @@ set(client_sources
     client.cpp
 )
 
+set(pushpull_server_sources
+    pull_server.cpp
+)
+
+set(pushpull_client_sources
+    push_client.cpp
+)
+
 add_executable(server ${server_sources})
 add_executable(client ${client_sources})
+add_executable(pushpull_server ${pushpull_server_sources})
+add_executable(pushpull_client ${pushpull_client_sources})
 
 target_link_libraries(server ${ZMQ_LIBRARIES})
 target_link_libraries(client ${ZMQ_LIBRARIES})
+target_link_libraries(pushpull_server ${ZMQ_LIBRARIES})
+target_link_libraries(pushpull_client ${ZMQ_LIBRARIES})
